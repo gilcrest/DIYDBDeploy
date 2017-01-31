@@ -46,9 +46,8 @@ tr -d '\r' < ../script/deployment.sql > ../work/d1.sql
 # that may be present in the file. Certain "Schema Compare" tools automatically 
 # determine any dependent objects for the ones they are deploying and add a 
 # compile statement for them regardless of what compilation state they're in.  
-# This can cause havoc, particularly with "types" and end up invalidatinga a 
-# bunch of other objects.  Appended to the end of the script is a procedure 
-# execution that attempts to compile invalidated objects for the given schema  
+# This can cause havoc, particularly with "types" and end up invalidating a 
+# bunch of other objects.
 # =============================================================================
 
 # sed one-liner deletes the lines after the matching regular 
