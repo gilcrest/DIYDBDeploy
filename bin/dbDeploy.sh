@@ -26,7 +26,6 @@ for envCheck in $envs
 do
   if [[ $envCheck != "ENV"* ]]; then
   	echo 'Your deployment script must have a proper header - please check your script!';
-        # echo 'Your deployment script must have a proper header - please check your script!';
         #| mailx -s "Failed: $EMAIL_SUBJECT" $EMAIL_TO_LIST;
   	exit 23;
   fi
@@ -42,7 +41,7 @@ sed -i '' -e '1d' ../script/deployment.sql
 tr -d '\r' < ../script/deployment.sql > ../work/d1.sql
 
 # =============================================================================
-# The next two sed statements removes any "Alter ** Compile **"" statements 
+# The next two sed commands remove any "Alter ** Compile **"" pl/sql statements 
 # that may be present in the file. Certain "Schema Compare" tools automatically 
 # determine any dependent objects for the ones they are deploying and add a 
 # compile statement for them regardless of what compilation state they're in.  
