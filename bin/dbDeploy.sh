@@ -126,7 +126,9 @@ log_fileName=$file_name"_"$env"_"$current_time.$logfile_suffix
 # export LD_LIBRARY_PATH=/opt/oracle/database/11.2.0/client/lib
 # $ORACLE_HOME/bin/sqlplus /nolog << EOF
 
-# If not necesary to explicitly set the the path
+# If it is not necessary to explicitly set the the path, use the raw sqlplus command below
+# All the commands between the two "EOF" markers below are piped into the sqlplus command at
+# runtime
 sqlplus /nolog << EOF
 
 # Connect string
